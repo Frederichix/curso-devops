@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Instalação do Python
+    ansible.builtin.apt:
+      name: python3
+      state: present
+      update_cache: yes
+
+  - name: Instalação do Git
+    ansible.builtin.apt:
+      name: git
+      state: present
